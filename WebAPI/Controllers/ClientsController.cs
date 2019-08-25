@@ -7,11 +7,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using DBEntities;
 
 namespace WebAPI.Controllers
 {
+    [EnableCors(origins: "http://localhost:4201", headers: "*", methods: "*")]
     public class ClientsController : ApiController
     {
         private RECRMEntities db = new RECRMEntities();
