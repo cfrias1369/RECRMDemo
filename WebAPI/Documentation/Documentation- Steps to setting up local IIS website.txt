@@ -1,0 +1,17 @@
+﻿Steps to creating my local IIS website on which to test this api in a more standalone manner
+- Installed IIS 10.0 (using Turn Windows Features On/Off)
+  - Had to install 
+    - Internet Information Services => Web Management Tools => IIS 6 Management Compatibility => IIS Metabase and IIS 6 configuration compatibility
+	- Internet Information Services => Web Management Tools => IIS Managemet Console
+	- Internet Information Services => Worldwide Web Services => (all defaults)
+	- Internet Information Services => Worldwide Web Services => Application Development Features => (all but CGI)
+- Created a new Application Web Pool (RECRMDemoAPIPool with cfrias as the identity)
+- Created a new Website (RECRMDemoAPI with path wwwroot\Sites\RECRMDemoAPI\, cred cfrias, and binding http:*:8080:)
+- Updated the applicationHost.config to have loadUserProfile and setProfileEnvironment set to true:
+  - e.g.
+        <applicationPools>
+            <applicationPoolDefaults managedRuntimeVersion="v4.0">
+                <processModel identityType="ApplicationPoolIdentity" loadUserProfile="true" setProfileEnvironment="true" />
+  - (This was per http://geekswithblogs.net/pabothu/archive/2015/11/06/error-local-database-runtime-error-occurred.-error-occurred-during-localdb.aspx)
+- Ensured that the localDB local mdf file connection was updated after moving the mdf to a more project-agnostic location (C:\CRFWork\DBs\RECRMDB\RECRM.mdf)
+- Also keep in mind that the Web Deploy needs to specify the appropriate location of the db

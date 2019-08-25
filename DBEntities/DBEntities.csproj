@@ -89,9 +89,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RECRM.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="RECRM.mdf" />
     <Content Include="RECRMEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RECRMEntities.Context.cs</LastGenOutput>
@@ -103,7 +101,6 @@
       <LastGenOutput>RECRMEntities.cs</LastGenOutput>
     </Content>
     <Content Include="RECRM_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>RECRM.mdf</DependentUpon>
     </Content>
   </ItemGroup>
