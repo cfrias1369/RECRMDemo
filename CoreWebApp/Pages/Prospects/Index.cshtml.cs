@@ -22,7 +22,7 @@ namespace CoreWebApp.Pages.Prospects
 
         public async Task OnGetAsync()
         {
-            Prospect = await _context.Prospect.ToListAsync();
+            Prospect = await _context.Prospects.ToListAsync();
         }
     }
 }

@@ -13,6 +13,6 @@ namespace CoreWebApp.Models
         {
         }
 
-        public DbSet<CoreWebApp.Models.Prospect> Prospect { get; set; }
+        public DbSet<CoreWebApp.Models.Prospect> Prospects { get; set; }
     }
 }

@@ -28,7 +28,7 @@ namespace CoreWebApp.Pages.Prospects
                 return NotFound();
             }
 
-            Prospect = await _context.Prospect.FirstOrDefaultAsync(m => m.Id == id);
+            Prospect = await _context.Prospects.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Prospect == null)
             {
@@ -44,11 +44,11 @@ namespace CoreWebApp.Pages.Prospects
                 return NotFound();
             }
 
-            Prospect = await _context.Prospect.FindAsync(id);
+            Prospect = await _context.Prospects.FindAsync(id);
 
             if (Prospect != null)
             {
-                _context.Prospect.Remove(Prospect);
+                _context.Prospects.Remove(Prospect);
                 await _context.SaveChangesAsync();
             }
 

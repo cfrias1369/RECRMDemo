@@ -33,7 +33,7 @@ namespace CoreWebApp.Pages.Prospects
                 return Page();
             }
 
-            _context.Prospect.Add(Prospect);
+            _context.Prospects.Add(Prospect);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

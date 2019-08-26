@@ -27,7 +27,7 @@ namespace CoreWebApp.Pages.Prospects
                 return NotFound();
             }
 
-            Prospect = await _context.Prospect.FirstOrDefaultAsync(m => m.Id == id);
+            Prospect = await _context.Prospects.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Prospect == null)
             {

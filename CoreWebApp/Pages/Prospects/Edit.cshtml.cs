@@ -29,7 +29,7 @@ namespace CoreWebApp.Pages.Prospects
                 return NotFound();
             }
 
-            Prospect = await _context.Prospect.FirstOrDefaultAsync(m => m.Id == id);
+            Prospect = await _context.Prospects.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Prospect == null)
             {
@@ -68,7 +68,7 @@ namespace CoreWebApp.Pages.Prospects
 
         private bool ProspectExists(int id)
         {
-            return _context.Prospect.Any(e => e.Id == id);
+            return _context.Prospects.Any(e => e.Id == id);
         }
     }
 }
