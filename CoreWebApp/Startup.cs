@@ -43,6 +43,12 @@ namespace CoreWebApp
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
+
+            services.AddCors(c =>
+            {
+                //c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:4201").AllowAnyMethod().AllowAnyHeader()); // This allows controllers and actions to select this policy for their Cors policy
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -71,6 +77,10 @@ namespace CoreWebApp
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+
+            // Following instrucions for adding Cors per https://www.c-sharpcorner.com/article/enabling-cors-in-asp-net-core-api-application/
+            //app.UseCors(options => options.AllowAnyOrigin());
+            //app.UseCors(options => options.WithOrigins("http://localhost:4201")); // This sets the default Cors settings for the entire application
 
             app.UseMvc();
         }

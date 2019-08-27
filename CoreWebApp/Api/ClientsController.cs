@@ -6,11 +6,13 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CoreWebApp.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace CoreWebApp.Api
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("AllowOrigin")] // this applies the AllowOrigin policy set up in Startup.cs:ConfigureServices
     public class ClientsController : ControllerBase
     {
         private readonly RECRMDBContext _context;
