@@ -1,0 +1,4 @@
+﻿Azure App Service Configuration Connection Strings
+Name: RECRMEntities
+Value: metadata=res://*/RECRMEntities.csdl|res://*/RECRMEntities.ssdl|res://*/RECRMEntities.msl;provider=System.Data.SqlClient;provider connection string='Data Source=tcp:corewebapp20190827124747dbserver.database.windows.net,1433;Initial Catalog=CoreWebApp20190827124747_db;User ID=[INSERT_ADMIN_USERNAME_HERE];Password=[INSERT_PWD_HERE]'
+Type: Custom
