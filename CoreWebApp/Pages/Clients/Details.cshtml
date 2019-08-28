@@ -1,0 +1,115 @@
+﻿@page
+@model CoreWebApp.Pages.Clients.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.MiddleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.MiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.NickName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.NickName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.PhoneNumber1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.PhoneNumber1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.PhoneNumber2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.PhoneNumber2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Address1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Address1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Address2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Address2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.City)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.State)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.State)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.Zip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.Zip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.InitialContactDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.InitialContactDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.InitialContactNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.InitialContactNotes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.SpouseName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.SpouseName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.BirthDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.AdditionalNotes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Client.AdditionalNotes)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Client.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
