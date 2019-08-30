@@ -37,9 +37,14 @@ namespace WebMVCApp.Controllers
         }
 
         // GET: Clients/Create
-        public ActionResult Create()
+        public ActionResult Create([Bind(Include = "name,phoneNumber,initialContactDate,initialContactNotes")] Prospect prospect)
         {
-            return View();
+            Client client = new Client();
+            client.firstName = prospect.name;
+            client.phoneNumber1 = prospect.phoneNumber;
+            client.initialContactDate = prospect.InitialContactDate;
+            client.initialContactNotes = prospect.initialContactNotes;
+            return View(client);
         }
 
         // POST: Clients/Create

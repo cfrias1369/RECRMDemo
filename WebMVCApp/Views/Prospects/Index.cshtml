@@ -40,11 +40,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.initialContactNotes)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
+		<td>
+			@Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+			@Html.ActionLink("Details", "Details", new { id = item.id }) |
+			@Html.ActionLink("Promote to Client", "Create", "Clients", new
+			{
+				@name = item.name,
+				@phoneNumber = item.phoneNumber,
+				@initialContactDate = item.InitialContactDate,
+				@initialContactNotes = item.initialContactNotes
+			}, null); |
+			@Html.ActionLink("Delete", "Delete", new { id = item.id })
+		</td>
     </tr>
 }
 

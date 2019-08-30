@@ -20,6 +20,13 @@ namespace CoreWebApp.Pages.Clients
 
         public IActionResult OnGet()
         {
+            Client = new Client();
+
+            Client.FirstName = Request.Query["FirstName"].ToString();
+            Client.PhoneNumber1 = Request.Query["PhoneNumber1"].ToString();
+            Client.InitialContactDate = Request.Query["InitialContactDate"].ToString();
+            Client.InitialContactNotes = Request.Query["InitialContactNotes"].ToString();
+
             return Page();
         }
 
