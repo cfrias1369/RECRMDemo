@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.phoneNumber)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.InitialContactDate)
+            @Html.DisplayNameFor(model => model.initialContactDate)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.initialContactNotes)
@@ -35,7 +35,7 @@
             @Html.DisplayFor(modelItem => item.phoneNumber)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.InitialContactDate)
+            @Html.DisplayFor(modelItem => item.initialContactDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.initialContactNotes)
@@ -47,7 +47,7 @@
 			{
 				@name = item.name,
 				@phoneNumber = item.phoneNumber,
-				@initialContactDate = item.InitialContactDate,
+				@initialContactDate = item.initialContactDate,
 				@initialContactNotes = item.initialContactNotes
 			}, null); |
 			@Html.ActionLink("Delete", "Delete", new { id = item.id })

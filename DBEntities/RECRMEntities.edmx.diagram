@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="38a5511948b84f0d96a7453a2bd0db6c" Name="Diagram1">
         <EntityTypeShape EntityType="RECRMModel.Client" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="RECRMModel.Prospect" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RECRMModel.Prospect" Width="2.875" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

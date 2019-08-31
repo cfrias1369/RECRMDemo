@@ -5,7 +5,6 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
-using System.Web.Http.Cors;
 using System.Web.Mvc;
 using DBEntities;
 
@@ -13,7 +12,7 @@ namespace WebMVCApp.Controllers
 {
     public class ProspectsController : Controller
     {
-        private RECRMEntities db = new RECRMEntities();
+        private readonly RECRMEntities db = new RECRMEntities();
 
         // GET: Prospects
         public ActionResult Index()
@@ -47,7 +46,7 @@ namespace WebMVCApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,name,phoneNumber,InitialContactDate,initialContactNotes")] Prospect prospect)
+        public ActionResult Create([Bind(Include = "id,name,phoneNumber,initialContactDate,initialContactNotes")] Prospect prospect)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +78,7 @@ namespace WebMVCApp.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,name,phoneNumber,InitialContactDate,initialContactNotes")] Prospect prospect)
+        public ActionResult Edit([Bind(Include = "id,name,phoneNumber,initialContactDate,initialContactNotes")] Prospect prospect)
         {
             if (ModelState.IsValid)
             {
