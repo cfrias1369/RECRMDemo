@@ -11,7 +11,6 @@ namespace DBEntities
     internal sealed class ProspectModelMetadata
     {
         [Required(ErrorMessage = "Name is required.")]
-        [StringLength(5)]
         public string name { get; set; }
     }
 }

@@ -10,10 +10,8 @@ namespace CoreWebApp.Models
     {
         public int Id { get; set; }
         [Required(ErrorMessage = "First Name is required.")]
-        [StringLength(5)]
         public string FirstName { get; set; }
         [Required(ErrorMessage = "Last Name is required.")]
-        [StringLength(5)]
         public string LastName { get; set; }
         public string MiddleName { get; set; }
         public string NickName { get; set; }
