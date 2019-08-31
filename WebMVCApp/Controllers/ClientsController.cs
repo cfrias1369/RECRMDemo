@@ -13,7 +13,7 @@ namespace WebMVCApp.Controllers
 {
     public class ClientsController : Controller
     {
-        private RECRMEntities db = new RECRMEntities();
+        private readonly RECRMEntities db = new RECRMEntities();
 
         // GET: Clients
         public ActionResult Index()
@@ -42,7 +42,7 @@ namespace WebMVCApp.Controllers
             Client client = new Client();
             client.firstName = prospect.name;
             client.phoneNumber1 = prospect.phoneNumber;
-            client.initialContactDate = prospect.InitialContactDate;
+            client.initialContactDate = prospect.initialContactDate;
             client.initialContactNotes = prospect.initialContactNotes;
             return View(client);
         }

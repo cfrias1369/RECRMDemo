@@ -17,7 +17,7 @@ namespace DBEntities
         public int id { get; set; }
         public string name { get; set; }
         public string phoneNumber { get; set; }
-        public string InitialContactDate { get; set; }
+        public string initialContactDate { get; set; }
         public string initialContactNotes { get; set; }
     }
 }

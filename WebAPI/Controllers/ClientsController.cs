@@ -16,7 +16,7 @@ namespace WebAPI.Controllers
     [EnableCors(origins: "http://localhost:4201", headers: "*", methods: "*")]
     public class ClientsController : ApiController
     {
-        private RECRMEntities db = new RECRMEntities();
+        private readonly RECRMEntities db = new RECRMEntities();
 
         // GET: api/Clients
         public IQueryable<Client> GetClients()
@@ -84,7 +84,7 @@ namespace WebAPI.Controllers
             db.Clients.Add(client);
             db.SaveChanges();
 
-            return CreatedAtRoute("DefaultApi", new { id = client.id }, client);
+            return CreatedAtRoute("DefaultApi", new { client.id }, client);
         }
 
         // DELETE: api/Clients/5
