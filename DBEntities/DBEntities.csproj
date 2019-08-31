@@ -68,6 +68,8 @@
     <Compile Include="Client.cs">
       <DependentUpon>RECRMEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAnnotations\ClientModelAnnotations.cs" />
+    <Compile Include="DataAnnotations\ProspectModelAnnotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prospect.cs">
       <DependentUpon>RECRMEntities.tt</DependentUpon>
