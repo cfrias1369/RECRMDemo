@@ -12,7 +12,7 @@ namespace CoreWebApp.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "Your application description page. Test 0925T1819";
         }
     }
 }
