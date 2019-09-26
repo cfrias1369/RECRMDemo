@@ -15,7 +15,7 @@ namespace WebMVCApp.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page. Test: 0925T2347";
+            ViewBag.Message = "Your application description page. Test: 0926T0132";
 
             return View();
         }
