@@ -13,7 +13,7 @@ using DBEntities;
 
 namespace WebAPI.Controllers
 {
-    [EnableCors(origins: "http://localhost:4201", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:4201, https://angularwebapp201909261701.azurewebsites.net", headers: "*", methods: "*")]
     public class ProspectsController : ApiController
     {
         private RECRMEntities db = new RECRMEntities();
