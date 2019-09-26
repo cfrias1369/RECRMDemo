@@ -47,7 +47,7 @@ namespace CoreWebApp
             services.AddCors(c =>
             {
                 //c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:4201").AllowAnyMethod().AllowAnyHeader()); // This allows controllers and actions to select this policy for their Cors policy
+                c.AddPolicy("AllowOrigin", options => options.WithOrigins("http://localhost:4201, https://angularwebapp201909261701.azurewebsites.net").AllowAnyMethod().AllowAnyHeader()); // This allows controllers and actions to select this policy for their Cors policy
             });
         }
 
